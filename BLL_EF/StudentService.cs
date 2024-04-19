@@ -1,6 +1,7 @@
 ﻿using BLL.DTOModels;
 using BLL.ServiceInterfaces;
 using DAL;
+using Microsoft.EntityFrameworkCore;
 using Model;
 namespace BLL_EF
 {
@@ -20,21 +21,40 @@ namespace BLL_EF
                 Nazwisko = student.Nazwisko,
                 IdGrupy = student.IdGrupy
             });
+            _context.SaveChanges();
         }
 
         public void DeleteStudent(int id)
         {
-            throw new NotImplementedException();
+            var student = _context.Studenci.Single<Student>(x => x.Id == id);
+            _context.Studenci.Remove(student);
+            _context.SaveChanges();
         }
 
         public ICollection<StudentResponseDTO> GetStudents()
         {
-            throw new NotImplementedException();
+            var studentsResponse = new List<StudentResponseDTO>();
+            foreach(var student in _context.Studenci.Include(x => x.Grupa))
+            {
+                studentsResponse.Add(new StudentResponseDTO
+                {
+                    Id = student.Id,
+                    Imie = student.Imie,
+                    Nazwisko = student.Nazwisko,
+                    NazwaGrupy = student.Grupa.Nazwa
+                });
+            }
+            return studentsResponse;
         }
 
         public void UpdateStudent(int id, StudentRequestDTO student)
         {
-            throw new NotImplementedException();
+            var studentToUpdate = _context.Studenci.Single<Student>(x => x.Id == id);
+            studentToUpdate.Imie = student.Imie;
+            studentToUpdate.Nazwisko = student.Nazwisko;
+            studentToUpdate.IdGrupy = student.IdGrupy;
+            _context.SaveChanges();
+
         }
     }
 }
