@@ -15,9 +15,9 @@ namespace BLL_DB
                 SqlCommand command = new SqlCommand("AddStudent", connection);
                 command.CommandType = CommandType.StoredProcedure;
 
-                command.Parameters.AddWithValue("@Name", student.Imie);
-                command.Parameters.AddWithValue("@Price", student.Nazwisko);
-                command.Parameters.AddWithValue("@GroupId", student.IdGrupy);
+                command.Parameters.AddWithValue("@Imie", student.Imie);
+                command.Parameters.AddWithValue("@Nazwisko", student.Nazwisko);
+                command.Parameters.AddWithValue("@IdGrupy", student.IdGrupy);
                 connection.Open();
                 command.ExecuteNonQuery();
             }

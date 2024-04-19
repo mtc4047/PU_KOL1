@@ -16,6 +16,12 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BLL_DB", "BLL_DB\BLL_DB.csproj", "{44F9A1FD-C7E8-4C3F-A578-DE3BB2435518}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SQL", "SQL", "{3065A074-DF9E-444A-9688-DAE621B3A374}"
+	ProjectSection(SolutionItems) = preProject
+		AddStudent.sql = AddStudent.sql
+		GetHistoria.sql = GetHistoria.sql
+		HistoriaDeleteTrigger.sql = HistoriaDeleteTrigger.sql
+		HistoriaUpdateTrigger.sql = HistoriaUpdateTrigger.sql
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
