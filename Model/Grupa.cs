@@ -13,12 +13,21 @@ namespace Model
         public int Id { get; set; } 
         public string Nazwa { get; set; }
 
+        public int? ParentId { get; set; }
+
         public ICollection<Student> Studenci { get; set; }
         public ICollection<Historia> Zdarzenia { get; set; }
+
+        public Grupa? ParentGrupa { get; set; }
+        public ICollection<Grupa> GrupaChildren { get; set; }
+
 
         public void Configure(EntityTypeBuilder<Grupa> builder)
         {
             builder.HasKey(x => x.Id);
+            builder.HasOne(x => x.ParentGrupa)
+                .WithMany(x => x.GrupaChildren)
+                .HasForeignKey(x => x.ParentId);
         }
     }
 }

@@ -1,5 +1,5 @@
 using BLL.ServiceInterfaces;
-using BLL_EF;
+using BLL_DB;
 using DAL;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -7,6 +7,8 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddDbContext<DatabaseContext>();
 builder.Services.AddScoped<IStudentService, StudentService>();
+builder.Services.AddScoped<IGrupaService, GrupaService>();
+builder.Services.AddScoped<IHistoriaService, HistoriaService>();
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
