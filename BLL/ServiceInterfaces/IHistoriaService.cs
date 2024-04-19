@@ -1,4 +1,6 @@
-﻿using System;
+﻿using BLL.DTOModels;
+using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,6 +10,6 @@ namespace BLL.ServiceInterfaces
 {
     public interface IHistoriaService
     {
-        public void getHistoria(int strona, int iloscNaStronie);
+        public ICollection<HistoriaResponseDTO> getHistoria(int strona, int iloscNaStronie);
     }
 }
