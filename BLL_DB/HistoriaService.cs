@@ -19,7 +19,7 @@ namespace BLL_DB
 
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
-                SqlCommand command = new SqlCommand("GetPaginatedHistoria", connection);
+                SqlCommand command = new SqlCommand("GetHistoria", connection);
                 command.CommandType = CommandType.StoredProcedure;
 
                 command.Parameters.AddWithValue("@Strona", strona);
