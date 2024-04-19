@@ -13,6 +13,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BLL_EF", "BLL_EF\BLL_EF.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApi", "WebApi\WebApi.csproj", "{9DCAE343-A884-4210-9F05-C0898C573D96}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BLL_DB", "BLL_DB\BLL_DB.csproj", "{44F9A1FD-C7E8-4C3F-A578-DE3BB2435518}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SQL", "SQL", "{3065A074-DF9E-444A-9688-DAE621B3A374}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +43,10 @@ Global
 		{9DCAE343-A884-4210-9F05-C0898C573D96}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9DCAE343-A884-4210-9F05-C0898C573D96}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9DCAE343-A884-4210-9F05-C0898C573D96}.Release|Any CPU.Build.0 = Release|Any CPU
+		{44F9A1FD-C7E8-4C3F-A578-DE3BB2435518}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{44F9A1FD-C7E8-4C3F-A578-DE3BB2435518}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{44F9A1FD-C7E8-4C3F-A578-DE3BB2435518}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{44F9A1FD-C7E8-4C3F-A578-DE3BB2435518}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
