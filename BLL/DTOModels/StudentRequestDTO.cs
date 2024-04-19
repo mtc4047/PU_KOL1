@@ -8,5 +8,8 @@ namespace BLL.DTOModels
 {
     public class StudentRequestDTO
     {
+        public string Imie { get; set; }
+        public string Nazwisko { get; set; }
+        public int IdGrupy { get; set; }
     }
 }

@@ -9,9 +9,9 @@ namespace BLL.ServiceInterfaces
 {
     public interface IStudentService
     {
-        public void AddStudent();
+        public void AddStudent(StudentRequestDTO student);
         public void UpdateStudent(int id,StudentRequestDTO student);
-        public void DeleteStudent();
+        public void DeleteStudent(int id);
         public ICollection<StudentResponseDTO> GetStudents();
     }
 }
